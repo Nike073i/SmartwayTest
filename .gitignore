@@ -1,0 +1,14 @@
+[Bb]in
+[Oo]bj
+
+*.user
+*.exe
+*.dll
+*.nupkg
+*.ncrunchsolution
+*.[Cc]ache
+*.suo
+*.log
+
+/.vscode
+/docker/service-data

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartwayTest.FileWebService</name>
+    </assembly>
+    <members>
+        <member name="T:SmartwayTest.FileWebService.Controllers.DowloadTokenController">
+            <summary>
+            Сontroller for download tokens
+            </summary>
+        </member>
+        <member name="M:SmartwayTest.FileWebService.Controllers.DowloadTokenController.GenerateDownloadToken(System.Int32)">
+            <summary>
+            Generate token for file
+            </summary>
+            <param name="fileInfoId">File ID</param>
+            <returns>Token for download</returns>
+            <response code="200">The token was generated successfully</response>
+        </member>
+        <member name="M:SmartwayTest.FileWebService.Controllers.DowloadTokenController.DownloadFileByToken(System.Guid)">
+            <summary>
+            Download file by token
+            </summary>
+            <param name="downloadToken">Token</param>
+            <returns>File</returns>
+            <response code="200">The token was successfully applied</response>
+            <response code="400">The token is invalid</response>
+        </member>
+        <member name="T:SmartwayTest.FileWebService.Controllers.FileController">
+            <summary>
+            File operations controller
+            </summary>
+        </member>
+        <member name="M:SmartwayTest.FileWebService.Controllers.FileController.UploadFile(Microsoft.AspNetCore.Http.IFormFile[],System.String)">
+            <summary>
+            Uploading files to the server
+            </summary>
+            <param name="files">Files for upload</param>
+            <param name="connectionId">ID of the client connection to the hub</param>
+            <response code="200">All files were uploaded successfully</response>
+            <response code="400">One or more uploaded files are invalid</response>
+        </member>
+        <member name="M:SmartwayTest.FileWebService.Controllers.FileController.DownloadFile(System.Int32)">
+            <summary>
+            Download the file from the server
+            </summary>
+            <param name="fileInfoId">File ID</param>
+            <returns>File</returns>
+            <response code="200">The file was downloaded successfully</response>
+            <response code="400">The file with the specified ID does not exist</response>
+        </member>
+        <member name="M:SmartwayTest.FileWebService.Controllers.FileController.GetAllFile">
+            <summary>
+            Provide information about stored files
+            </summary>
+            <returns>File data</returns>
+            <response code="200">Returned list of stored files</response>
+        </member>
+    </members>
+</doc>
